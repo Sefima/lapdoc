@@ -1,0 +1,99 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+}
+.footer,
+.push {
+    height: 50px;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.page-single {
+    margin-bottom: 30px;
+}
+
+li.list-group-custom {
+    padding-left: 15px;
+}
+
+li.list-group-file {
+    margin-bottom: 7px;
+}
+
+li.list-group-custom a {
+    color: #5b5b5b;
+    list-style-type: none;
+}
+
+li.list-group-file a.active {
+    color: #d1800a;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar {
+    top: 65px;
+}
+
+.sidebar {
+    height: calc(100vh - 65px);
+    overflow: auto;
+    width: 12%;
+    max-width: 310px;
+}
+
+.sidebar .list-group {
+}
+
+.margin-auto {
+    margin: auto 0;
+}
+
+.wrapper-content {
+    margin: auto 0;
+    margin-top: 57px;
+}
+
+.container-fluid.container-main {
+    max-width: 1400px;
+}
+
+header.navbar {
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+h5 {
+    font-size: 1.2rem;
+}
+h6 {
+    font-size: 1.1rem;
+}
+
+

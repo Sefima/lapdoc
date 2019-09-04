@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="templates/main.css"></link>
+        <link rel="stylesheet" href="templates/prism.css"></link>
+        <link href="templates/iconic/css/open-iconic-bootstrap.min.css"></link>
+        <title>{{config.app.title}}</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="margin-auto">
+                <header class="navbar navbar-dark bg-dark position-fixed" style="padding-left: 0">
+                <div class="container-fluid container-main">
+                    <h3 class="text-light">
+                        {{ config.app.title }}
+                    </h3>
+                </div>
+                </header>
+            </div>
+
+            <div class="wrapper-content">
+                <div class="container-fluid container-main" style="margin-top: 15px;">
+                    <div class="row">
+                        <div class="col-sm-3 position-sticky sidebar">
+                            <div class="row">
+                                <ul class="list-group list-group-flush" id="sidebar">
+                                    {% for item in toc %}
+                                    <li class="list-group-custom
+                                    {% if item.type == 'file' %}
+                                        list-group-file
+                                    {% endif %}
+                                    "
+                                    style="margin-left:{{10 * item.level}}px">
+                                        {% if item.type == 'file' %}
+                                            {% for anchor in item.anchors %}
+                                                <a href="#{{anchor.html_id}}">
+                                                    {{anchor.text}}
+                                                </a>
+                                            {% endfor %}
+                                        {% else %}
+                                            {% if item.level == 0 %}
+                                                <h5>{{item.value}}</h5>
+                                            {% else %}
+                                                <h6>{{item.value}}</h6>
+                                            {% endif %}
+                                        {% endif %}
+
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-9" id="posts-content">
+                            {% for page in content %}
+                                <div class="page-single col-sm-12">
+                                    {{ page|raw }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer text-center bg-dark text-light">
+                <div style="padding-top: 15px;">
+                    {{config.app.footer}}
+                </div>
+            </footer>
+        </div>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./templates/prism.js"></script>
+        <script src="./templates/main.js"></script>
+    </body>
+</html>

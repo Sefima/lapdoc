@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="templates/main.css"></link>
+        <link rel="stylesheet" href="templates/prism.css"></link>
+        <link href="templates/iconic/css/open-iconic-bootstrap.min.css"></link>
+        <title>Lapdoc</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="margin-auto">
+                <header class="navbar navbar-dark bg-dark position-fixed" style="padding-left: 0">
+                <div class="container-fluid container-main">
+                    <h3 class="text-light">
+                        Lapdoc
+                    </h3>
+                </div>
+                </header>
+            </div>
+
+            <div class="wrapper-content">
+                <div class="container-fluid container-main" style="margin-top: 15px;">
+                    <div class="row">
+                        <div class="col-sm-3 position-sticky sidebar">
+                            <div class="row">
+                                <ul class="list-group list-group-flush" id="sidebar">
+                                                                        <li class="list-group-custom
+                                                                        "
+                                    style="margin-left:0px">
+                                                                                                                                    <h5>Welcome</h5>
+                                                                                    
+                                    </li>
+                                                                        <li class="list-group-custom
+                                                                            list-group-file
+                                                                        "
+                                    style="margin-left:10px">
+                                                                                                                                    <a href="#Welcome-to-Lapdoc-0-0">
+                                                    Welcome to Lapdoc
+                                                </a>
+                                                                                    
+                                    </li>
+                                                                        <li class="list-group-custom
+                                                                        "
+                                    style="margin-left:0px">
+                                                                                                                                    <h5>Setup</h5>
+                                                                                    
+                                    </li>
+                                                                        <li class="list-group-custom
+                                                                            list-group-file
+                                                                        "
+                                    style="margin-left:10px">
+                                                                                                                                    <a href="#Setting-up-1-0">
+                                                    Setting up
+                                                </a>
+                                                                                    
+                                    </li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-9" id="posts-content">
+                                                            <div class="page-single col-sm-12">
+                                    <div><h1 id="Welcome-to-Lapdoc-0-0">Welcome to Lapdoc</h1>
+<p>Hi, thanks for using Lapdoc. With Lapdoc, things are easy. Here's a screenshot of what I can do.</p>
+<p><img src="images/lapdoc-main.PNG" alt="Lapdoc" class="img-fluid"></p>
+<p>Now, let me show you how good I am in Latin.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec ante luctus, consequat lectus gravida, euismod odio. Cras lobortis velit vel ligula iaculis, sit amet dignissim sem rutrum. Duis porttitor arcu ac venenatis eleifend. Sed porta, ante vel pharetra laoreet, tellus purus tincidunt nulla, ut blandit elit metus eget purus. Suspendisse porta purus ac iaculis ullamcorper. Nulla facilisi. Etiam magna urna, accumsan eget lectus in, fringilla tempor lorem.</p>
+<p>Finally here's a plantuml graph of what I mean :</p>
+<img src="plantuml-images/61cefcc8-3ab1-45e2-a387-be89f26b2e22.svg" alt="uml diagram" class="img-fluid">
+<div></div></div>
+                                </div>
+                                                            <div class="page-single col-sm-12">
+                                    <div><h1 id="Setting-up-1-0">Setting up</h1>
+<p>Lapdoc is a lightweight documentation tool for power users. It features :</p>
+<ul>
+<li>[x] Compose your documentation in markdown and plantuml, in individual files</li>
+<li>[x] Merge all the markdown files into a gorgeous webpage featuring a table of content sidebar</li>
+<li>[x] The webpage works off the internet, you can give it to your client or boss and it will work!</li>
+<li>[x] Clever syntax highlighting</li>
+<li>[x] Node.js toolchain</li>
+<li>[x] Organize your categories and subcategories as you want, with infinite levels of depth</li>
+<li>[ ] Builds a PDF version of your documentation</li>
+</ul>
+<h2>Setup</h2>
+<p>Clone this repository and run :</p>
+<pre><code class="language-bash">npm install
+</code></pre>
+<p>Put your markdown files in <code>./docs</code>, then edit <code>config.js</code>.</p>
+<pre><code class="language-javascript">module.exports = {
+    app: {
+        title: &quot;Lapdoc&quot;,
+    },
+    map: {
+        &quot;docs/Welcome.md&quot;,
+        {
+            &quot;Setup&quot;: [&quot;docs/Setup.md&quot;]
+        },
+    }
+};
+
+</code></pre>
+<p>Now, you can build your documentation into a gorgeous deliverable!</p>
+<pre><code>node lapdoc.js
+</code></pre>
+<h2>Roadmap</h2>
+<div></div></div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer text-center bg-dark text-light">
+                <div style="padding-top: 15px;">
+                    <3
+                </div>
+            </footer>
+        </div>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./templates/prism.js"></script>
+        <script src="./templates/main.js"></script>
+    </body>
+</html>
