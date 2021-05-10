@@ -13,7 +13,7 @@
     "bootstrap": "^4.3.1",
     "diacritics": "^1.3.0",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "markdown-cli-renderer": "^0.1.9",
     "markdown-it": "^9.1.0",
     "markdown-it-plantuml": "^1.4.1",
