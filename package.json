@@ -15,7 +15,7 @@
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "markdown-cli-renderer": "^0.1.9",
-    "markdown-it": "^9.1.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-plantuml": "^1.4.1",
     "node-pandoc": "^0.3.0",
     "node-plantuml": "^0.9.0",
